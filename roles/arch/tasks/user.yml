@@ -1,0 +1,9 @@
+---
+- name: create user
+  user:
+    name: "{{ user }}"
+    group: "{{ user }}"
+    groups:
+      - wheel
+      - docker
+  become: true
