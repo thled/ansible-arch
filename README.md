@@ -7,7 +7,7 @@
 0. Install Git and Ansible: `$ pacman -S git ansible`
 0. Clone this repository: `$ git clone https://github.com/thled/ansible-arch.git`
 0. Change to project directory: `$ cd ansible-arch`
-0. Run the Ansible Playbook: `$ ansible-playbook --ask-become-pass playbook.yml`
+0. Run the Ansible Playbook: `$ ansible-playbook playbook.yml`
 0. Add SSH keys manually to `~/.ssh/`.
 0. Reboot system.
 

@@ -5,5 +5,5 @@
     - arch
   vars_prompt:
     - name: user
-      prompt: Enter your username.
+      prompt: Enter your username
       private: false
