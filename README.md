@@ -2,7 +2,7 @@
 
 ## Usage
 
-0. Install [Arch Linux](##Arch-Installation).
+0. Install [Arch Linux](#arch-installation).
 0. Update system: `$ pacman -Syu`
 0. Install Git and Ansible: `$ pacman -S git ansible`
 0. Clone this repository: `$ git clone https://github.com/thled/ansible-arch.git`
