@@ -44,4 +44,3 @@
 - name: install meld
   pacman:
     name: meld
-  become: true

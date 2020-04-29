@@ -2,7 +2,6 @@
 - name: install neovim
   pacman:
     name: neovim
-  become: true
 
 - name: create vim autoload directory
   file:
@@ -32,8 +31,6 @@
 
 - name: set vim as default
   lineinfile:
-    path: ~/.profile
-    regexp: '^export EDITOR='
-    line: export EDITOR=/usr/bin/neovim
-  become: true
-  become_user: "{{ user }}"
+    path: /etc/environment
+    regexp: '^EDITOR=.*'
+    line: EDITOR=/usr/bin/neovim
