@@ -1,0 +1,47 @@
+---
+- name: copy global gitconfig
+  copy:
+    src: git/.gitconfig
+    dest: ~/
+  become: true
+  become_user: "{{ user }}"
+
+- name: create work project directory
+  file:
+    name: ~/Projects
+    state: directory
+  become: true
+  become_user: "{{ user }}"
+
+- name: copy work gitconfig
+  template:
+    src: git/work_config.j2
+    dest: ~/Projects/.gitconfig
+  become: true
+  become_user: "{{ user }}"
+
+- name: create private project directory
+  file:
+    name: ~/MyProjects
+    state: directory
+  become: true
+  become_user: "{{ user }}"
+
+- name: copy private gitconfig
+  copy:
+    src: git/private_config.j2
+    dest: ~/MyProjects/.gitconfig
+  become: true
+  become_user: "{{ user }}"
+
+- name: copy global gitignore
+  copy:
+    src: git/ignore
+    dest: ~/.config/git/
+  become: true
+  become_user: "{{ user }}"
+
+- name: install meld
+  pacman:
+    name: meld
+  become: true

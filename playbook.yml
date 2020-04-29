@@ -7,3 +7,15 @@
     - name: user
       prompt: Enter your username
       private: false
+    - name: git_work_name
+      prompt: Enter your git name (work)
+      private: false
+    - name: git_work_email
+      prompt: Enter your git email (work)
+      private: false
+    - name: git_private_name
+      prompt: Enter your git name (private)
+      private: false
+    - name: git_private_email
+      prompt: Enter your git email (private)
+      private: false

@@ -1,0 +1,8 @@
+---
+- name: copy ssh config
+  copy:
+    src: ssh/config
+    dest: ~/.ssh/
+    mode: 0644
+  become: true
+  become_user: "{{ user }}"
