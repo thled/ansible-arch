@@ -1,4 +1,9 @@
 ---
+- name: install sudo
+  pacman:
+    name: sudo
+  become: true
+
 - name: create user
   user:
     name: "{{ user }}"

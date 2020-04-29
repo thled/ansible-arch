@@ -28,7 +28,7 @@
   become_user: "{{ user }}"
 
 - name: copy private gitconfig
-  copy:
+  template:
     src: git/private_config.j2
     dest: ~/MyProjects/.gitconfig
   become: true
