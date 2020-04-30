@@ -3,6 +3,12 @@
   pacman:
     name: sudo
 
+- name: add wheel group to sudoers
+  copy:
+    content: '%wheel ALL=(ALL) ALL'
+    dest: /etc/sudoers.d/sudoer_wheel
+    mode: 0440
+
 - name: create user
   user:
     name: "{{ user }}"

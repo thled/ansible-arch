@@ -33,4 +33,4 @@
   lineinfile:
     path: /etc/environment
     regexp: '^EDITOR=.*'
-    line: EDITOR=/usr/bin/neovim
+    line: EDITOR=/usr/bin/nvim
