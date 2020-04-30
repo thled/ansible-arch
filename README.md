@@ -3,13 +3,16 @@
 ## Usage
 
 0. Install [Arch Linux](#arch-installation).
-0. Update system: `$ pacman -Syu`
 0. Install Git and Ansible: `$ pacman -S git ansible`
 0. Clone this repository: `$ git clone https://github.com/thled/ansible-arch.git`
 0. Change to project directory: `$ cd ansible-arch`
 0. Run the Ansible Playbook: `$ ansible-playbook playbook.yml`
-0. Add SSH keys manually to `~/.ssh/`.
+0. Set user password: `$ passwd XXX` (`XXX` = username)
 0. Reboot system.
+
+## Optional
+
+- Add SSH keys to `~/.ssh/`.
 
 ## Arch Installation
 

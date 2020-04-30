@@ -1,0 +1,21 @@
+---
+- name: install Xorg
+  pacman:
+    name:
+      - mesa
+      - xorg-server
+      - xorg-xinit
+
+- name: install i3
+  pacman:
+    name:
+      - picom
+      - i3-gaps
+      - i3status
+
+- name: set i3 as default
+  copy:
+    src: i3/.xinitrc
+    dest: ~/
+  become: true
+  become_user: "{{ user }}"

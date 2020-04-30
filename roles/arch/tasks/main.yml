@@ -5,3 +5,4 @@
 - import_tasks: git.yml
 - import_tasks: docker.yml
 - import_tasks: vim.yml
+- import_tasks: i3.yml
