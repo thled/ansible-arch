@@ -19,3 +19,10 @@
     dest: ~/
   become: true
   become_user: "{{ user }}"
+
+- name: copy i3 config
+  copy:
+    src: i3/config
+    dest: ~/.config/i3
+  become: true
+  become_user: "{{ user }}"
