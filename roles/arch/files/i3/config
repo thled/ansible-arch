@@ -43,14 +43,14 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+Shift+space floating toggle
 
 # move
-bindsym $mod+h move left
-bindsym $mod+j move down
-bindsym $mod+k move up
-bindsym $mod+l move right
-bindsym $mod+Left move left
-bindsym $mod+Down move down
-bindsym $mod+Up move up
-bindsym $mod+Right move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
 
 # fullscreen
 bindsym $mod+f fullscreen toggle
@@ -108,9 +108,9 @@ mode "resize" {
     bindsym Down resize grow height 10px or 10ppt
     bindsym Up resize shrink height 10px or 10ppt
     bindsym Right resize grow width 10px or 10ppt
-    binsym Return mode "default"
-    binsym Escape mode "default"
-    binsym $mod+r mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+r mode "default"
 }
 bindsym $mod+r mode "resize"
 
