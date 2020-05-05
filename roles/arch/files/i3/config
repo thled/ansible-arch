@@ -10,7 +10,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # lock
-bindsym $mod+l exec "i3lock -c 000000"
+bindsym $mod+x exec "i3lock -c 000000"
 
 # kill window
 bindsym $mod+Shift+q kill
@@ -22,8 +22,8 @@ bindsym $mod+d exec --no-startup-id rofi -show run
 bindsym $mod+Return exec --no-startup-id alacritty
 
 # split
-bindsym $mod+h split h
-bindsym $mod+v split v
+bindsym $mod+v split h
+bindsym $mod+Shift+v split v
 
 # focus
 bindsym $mod+h focus left
@@ -72,26 +72,26 @@ set $ws1 "8"
 set $ws1 "9"
 
 # switch workspaces
-bindsm $mod+1 workspace number $ws1
-bindsm $mod+2 workspace number $ws2
-bindsm $mod+3 workspace number $ws3
-bindsm $mod+4 workspace number $ws4
-bindsm $mod+5 workspace number $ws5
-bindsm $mod+6 workspace number $ws6
-bindsm $mod+7 workspace number $ws7
-bindsm $mod+8 workspace number $ws8
-bindsm $mod+9 workspace number $ws9
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
 
 # move to workspace
-bindsm $mod+Shift+1 move container to workspace number $ws1
-bindsm $mod+Shift+2 move container to workspace number $ws2
-bindsm $mod+Shift+3 move container to workspace number $ws3
-bindsm $mod+Shift+4 move container to workspace number $ws4
-bindsm $mod+Shift+5 move container to workspace number $ws5
-bindsm $mod+Shift+6 move container to workspace number $ws6
-bindsm $mod+Shift+7 move container to workspace number $ws7
-bindsm $mod+Shift+8 move container to workspace number $ws8
-bindsm $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
 
 # reload/restart/exit
 bindsym $mod+Shift+c reload
