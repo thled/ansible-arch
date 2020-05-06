@@ -1,17 +1,9 @@
 ---
-# package manager
 - import_tasks: pacman.yml
-# user
 - import_tasks: user.yml
-# OpenSSH
 - import_tasks: ssh.yml
-# VCS
 - import_tasks: git.yml
-# containerization
-- import_tasks: docker.yml
-# editor
 - import_tasks: vim.yml
-# window manager
-- import_tasks: i3.yml
-# terminal
+- import_tasks: docker.yml
 - import_tasks: terminal.yml
+- import_tasks: window_manager.yml

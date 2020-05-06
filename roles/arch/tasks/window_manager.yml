@@ -6,6 +6,10 @@
       - xorg-server
       - xorg-xinit
 
+- name: install rofi
+  pacman:
+    name: rofi
+
 - name: install i3
   pacman:
     name:
