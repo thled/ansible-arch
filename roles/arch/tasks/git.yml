@@ -1,5 +1,5 @@
 ---
-- name: copy global gitconfig
+- name: configure git globally
   copy:
     src: git/.gitconfig
     dest: ~/
@@ -13,7 +13,7 @@
   become: true
   become_user: "{{ user }}"
 
-- name: copy work gitconfig
+- name: configure git for work
   template:
     src: git/work_config.j2
     dest: ~/Projects/.gitconfig
@@ -27,14 +27,14 @@
   become: true
   become_user: "{{ user }}"
 
-- name: copy private gitconfig
+- name: configure git for private
   template:
     src: git/private_config.j2
     dest: ~/MyProjects/.gitconfig
   become: true
   become_user: "{{ user }}"
 
-- name: copy global gitignore
+- name: configure gitignore globally
   copy:
     src: git/ignore
     dest: ~/.config/git/

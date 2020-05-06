@@ -1,0 +1,21 @@
+---
+- name: install font
+  pacman:
+    name: adobe-source-code-pro-fonts
+
+#tmux
+
+- name: install fish shell
+  pacman:
+    name: fish
+
+- name: install alacritty
+  pacman:
+    name: alacritty
+
+- name: configure alacritty
+  copy:
+    src: alacritty/alacritty.yml
+    dest: ~/.config/alacritty/
+  become: true
+  become_user: "{{ user }}"

@@ -1,5 +1,5 @@
 ---
-- name: copy ssh config
+- name: configure ssh
   copy:
     src: ssh/config
     dest: ~/.ssh/

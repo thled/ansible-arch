@@ -1,19 +1,19 @@
 ---
-- name: install Docker
+- name: install docker
   pacman:
     name: docker
 
-- name: install Docker-Compose
+- name: install docker-compose
   pacman:
     name: docker-compose
 
-- name: enable Docker daemon
+- name: enable docker daemon
   systemd:
     name: docker.service
     state: started
     enabled: true
 
-- name: add user to Docker group
+- name: add user to docker group
   user:
     name: "{{ user }}"
     groups: docker
