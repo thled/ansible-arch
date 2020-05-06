@@ -28,6 +28,6 @@
 - name: configure i3
   copy:
     src: i3/config
-    dest: ~/.config/i3
+    dest: ~/.config/i3/
   become: true
   become_user: "{{ user }}"
