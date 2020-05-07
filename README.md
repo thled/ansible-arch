@@ -4,11 +4,13 @@
 
 0. Install [Arch Linux](#arch-installation).
 0. Install Git and Ansible: `$ pacman -S git ansible`
+0. Install Ansible "aur" module : `$ git clone https://github.com/kewlfft/ansible-aur.git ~/.ansible/plugins/modules/aur`
 0. Clone this repository: `$ git clone https://github.com/thled/ansible-arch.git`
 0. Change to project directory: `$ cd ansible-arch`
 0. Run the Ansible Playbook: `$ ansible-playbook playbook.yml`
 0. Set user password: `$ passwd XXX` (`XXX` = username)
 0. Reboot system.
+0. Login with your chosen username and start i3: `$ startx`
 
 ## Optional
 

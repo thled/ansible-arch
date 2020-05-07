@@ -1,10 +1,10 @@
 ---
 - import_tasks: pacman.yml
-- import_tasks: user.yml
 - import_tasks: ssh.yml
 - import_tasks: git.yml
 - import_tasks: vim.yml
 - import_tasks: docker.yml
+- import_tasks: user.yml
 - import_tasks: terminal.yml
 - import_tasks: window_manager.yml
 - import_tasks: apps.yml

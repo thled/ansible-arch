@@ -2,6 +2,7 @@
 - name: install utilities
   pacman:
     name:
+      - base-devel
       - curl
       - htop
       - less
@@ -9,7 +10,6 @@
       - openssh
       - rsync
       - which
-      - yay
 
 - name: install applications
   pacman:
@@ -24,6 +24,9 @@
       - vlc
 
 - name: install aur applications
-  yay:
+  aur:
     name:
       - codium
+      - yay
+  become: true
+  become_user: aur_builder

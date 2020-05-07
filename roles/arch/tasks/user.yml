@@ -6,7 +6,7 @@
 - name: add wheel group to sudoers
   copy:
     content: '%wheel ALL=(ALL) ALL'
-    dest: /etc/sudoers.d/sudoer_wheel
+    dest: /etc/sudoers.d/sudoer-wheel
     mode: 0440
 
 - name: create user
@@ -14,3 +14,15 @@
     name: "{{ user }}"
     groups:
       - wheel
+      - docker
+
+- name: create user for aur
+  user:
+    name: aur_builder
+    group: wheel
+
+- name: add user for aur to sudoers
+  copy:
+    content: 'aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman'
+    dest: /etc/sudoers.d/sudoer-nopw-aur_builder
+    mode: 0440
