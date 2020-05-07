@@ -3,7 +3,9 @@
   pacman:
     name: adobe-source-code-pro-fonts
 
-#tmux
+- name: install tmux
+  pacman:
+    name: tmux
 
 - name: install fish shell
   pacman:

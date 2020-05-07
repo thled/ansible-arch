@@ -1,0 +1,29 @@
+---
+- name: install utilities
+  pacman:
+    name:
+      - curl
+      - htop
+      - less
+      - nmap
+      - openssh
+      - rsync
+      - which
+      - yay
+
+- name: install applications
+  pacman:
+    name:
+      - chromium
+      - feh
+      - firefox
+      - gimp
+      - obs-studio
+      - pcmanfm
+      - ranger
+      - vlc
+
+- name: install aur applications
+  yay:
+    name:
+      - codium
