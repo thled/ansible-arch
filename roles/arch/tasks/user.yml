@@ -13,6 +13,7 @@
 - name: create user for aur
   user:
     name: aur
+    groups: wheel
 
 - name: configure sudoers
   copy:
@@ -20,6 +21,6 @@
     dest: /etc/sudoers.d/
     mode: 0440
     validate: /usr/bin/visudo -cf %s
-  with_items:
-    - user/sudoer-wheel
-    - user/sudoer-aur
+  loop:
+    - user/1-sudoer-wheel
+    - user/2-sudoer-aur

@@ -6,12 +6,22 @@
   become: true
   become_user: "{{ user }}"
 
-- name: create work project directory
+- name: configure gitignore globally
+  copy:
+    src: git/ignore
+    dest: ~/.config/git/
+  become: true
+  become_user: "{{ user }}"
+
+- name: create project directories
   file:
-    name: ~/Projects
+    name: "{{ item }}"
     state: directory
   become: true
   become_user: "{{ user }}"
+  loop:
+    - ~/Projects
+    - ~/MyProjects
 
 - name: configure git for work
   template:
@@ -20,24 +30,10 @@
   become: true
   become_user: "{{ user }}"
 
-- name: create private project directory
-  file:
-    name: ~/MyProjects
-    state: directory
-  become: true
-  become_user: "{{ user }}"
-
 - name: configure git for private
   template:
     src: git/private_config.j2
     dest: ~/MyProjects/.gitconfig
-  become: true
-  become_user: "{{ user }}"
-
-- name: configure gitignore globally
-  copy:
-    src: git/ignore
-    dest: ~/.config/git/
   become: true
   become_user: "{{ user }}"
 
