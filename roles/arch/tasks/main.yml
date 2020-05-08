@@ -8,3 +8,4 @@
 - import_tasks: terminal.yml
 - import_tasks: window_manager.yml
 - import_tasks: apps.yml
+- import_tasks: cleanup.yml

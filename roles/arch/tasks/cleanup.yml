@@ -1,0 +1,5 @@
+- name: Remove user for aur
+  user:
+    name: aur
+    state: absent
+    remove: yes
