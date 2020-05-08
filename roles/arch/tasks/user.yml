@@ -3,12 +3,6 @@
   pacman:
     name: sudo
 
-- name: add wheel group to sudoers
-  copy:
-    content: '%wheel ALL=(ALL) ALL'
-    dest: /etc/sudoers.d/sudoer-wheel
-    mode: 0440
-
 - name: create user
   user:
     name: "{{ user }}"
@@ -18,11 +12,14 @@
 
 - name: create user for aur
   user:
-    name: aur_builder
-    group: wheel
+    name: aur
 
-- name: add user for aur to sudoers
+- name: configure sudoers
   copy:
-    content: 'aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman'
-    dest: /etc/sudoers.d/sudoer-nopw-aur_builder
+    src: "{{ item }}"
+    dest: /etc/sudoers.d/
     mode: 0440
+    validate: /usr/bin/visudo -cf %s
+  with_items:
+    - user/sudoer-wheel
+    - user/sudoer-aur
