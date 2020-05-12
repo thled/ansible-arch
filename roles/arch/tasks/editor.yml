@@ -38,6 +38,6 @@
 - name: install vscode
   aur:
     name:
-      - codium
+      - vscodium-bin
   become: true
   become_user: aur

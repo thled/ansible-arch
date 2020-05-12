@@ -5,8 +5,17 @@
       - chromium
       - firefox
 
+- name: download install script for tridactyl native messenger
+  get_url:
+    url: https://raw.githubusercontent.com/tridactyl/tridactyl/master/native/install.sh
+    dest: /tmp/trinativeinstall.sh
+  become: true
+  become_user: "{{ user }}"
+
 - name: install tridactyl native messenger
-  shell: curl -fsSl https://raw.githubusercontent.com/tridactyl/tridactyl/master/native/install.sh -o /tmp/trinativeinstall.sh && bash /tmp/trinativeinstall.sh master
+  shell: bash /tmp/trinativeinstall.sh master
+  become: true
+  become_user: "{{ user }}"
 
 - name: configure tridactyl
   copy:
