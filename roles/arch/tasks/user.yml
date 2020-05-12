@@ -3,16 +3,11 @@
   pacman:
     name: sudo
 
-- name: create group for docker
-  group:
-    name: docker
-
 - name: create user
   user:
     name: "{{ user }}"
     groups:
       - wheel
-      - docker
 
 - name: create user for aur
   user:
