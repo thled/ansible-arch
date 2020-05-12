@@ -1,4 +1,9 @@
 ---
+- name: install ssh
+  pacman:
+    name:
+      - openssh
+
 - name: configure ssh
   copy:
     src: ssh/config

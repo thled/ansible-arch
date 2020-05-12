@@ -4,6 +4,11 @@
     update_cache: true
     upgrade: true
 
+- name: install aur dependencies
+  pacman:
+    name:
+      - base-devel
+
 - name: install yay
   aur:
     name:

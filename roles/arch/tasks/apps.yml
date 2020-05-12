@@ -2,20 +2,17 @@
 - name: install utilities
   pacman:
     name:
-      - base-devel
       - curl
       - ffmpeg
       - htop
       - less
       - nmap
-      - openssh
       - rsync
       - which
 
 - name: install applications
   pacman:
     name:
-      - chromium
       - feh
       - gimp
       - obs-studio
