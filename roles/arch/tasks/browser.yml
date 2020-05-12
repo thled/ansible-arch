@@ -1,0 +1,16 @@
+---
+- name: install browsers
+  pacman:
+    name:
+      - chromium
+      - firefox
+
+- name: install tridactyl native messenger
+  shell: curl -fsSl https://raw.githubusercontent.com/tridactyl/tridactyl/master/native/install.sh -o /tmp/trinativeinstall.sh && bash /tmp/trinativeinstall.sh master
+
+- name: configure tridactyl
+  copy:
+    src: tridactyl/tridactylrc
+    dest: ~/.config/tridactyl/
+  become: true
+  become_user: "{{ user }}"

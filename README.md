@@ -15,6 +15,7 @@
 ## Optional
 
 - Add SSH keys to `~/.ssh/`.
+- Sync Firefox config and addons by logging in.
 
 ## Arch Installation
 

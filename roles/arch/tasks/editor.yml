@@ -34,3 +34,10 @@
     path: /etc/environment
     regexp: '^EDITOR=.*'
     line: EDITOR=/usr/bin/nvim
+
+- name: install vscode
+  aur:
+    name:
+      - codium
+  become: true
+  become_user: aur

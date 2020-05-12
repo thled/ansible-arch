@@ -1,0 +1,5 @@
+" General Settings
+set theme dark
+
+" Binds
+bind yt tabduplicate

@@ -4,6 +4,7 @@
     name:
       - base-devel
       - curl
+      - ffmpeg
       - htop
       - less
       - nmap
@@ -16,17 +17,8 @@
     name:
       - chromium
       - feh
-      - firefox
       - gimp
       - obs-studio
       - pcmanfm
       - ranger
       - vlc
-
-- name: install aur applications
-  aur:
-    name:
-      - codium
-      - yay
-  become: true
-  become_user: aur
