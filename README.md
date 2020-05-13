@@ -8,7 +8,6 @@
 0. Clone this repository: `$ git clone https://github.com/thled/ansible-arch.git`
 0. Change to project directory: `$ cd ansible-arch`
 0. Run the Ansible Playbook: `$ ansible-playbook playbook.yml`
-0. Set user password: `$ passwd XXX` (`XXX` = username)
 0. Reboot system.
 0. Login with your chosen username and start i3: `$ startx`
 

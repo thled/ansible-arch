@@ -7,6 +7,9 @@
     - name: user
       prompt: Enter your username
       private: false
+    - name: password
+      prompt: Enter your password
+      private: true
     - name: git_work_name
       prompt: Enter your git name (work)
       private: false

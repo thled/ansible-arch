@@ -6,6 +6,7 @@
 - name: create user
   user:
     name: "{{ user }}"
+    password: "{{ password | password_hash('sha512') }}"
     groups:
       - wheel
 
