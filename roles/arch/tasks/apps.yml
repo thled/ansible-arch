@@ -5,6 +5,7 @@
       - curl
       - ffmpeg
       - htop
+      - intel-ucode
       - less
       - nmap
       - rsync
