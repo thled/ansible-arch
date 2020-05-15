@@ -6,6 +6,8 @@
 - import_tasks: virtualization.yml
 - import_tasks: editor.yml
 - import_tasks: terminal.yml
+- import_tasks: gui.yml
+- import_tasks: audio.yml
 - import_tasks: window_manager.yml
 - import_tasks: browser.yml
 - import_tasks: apps.yml

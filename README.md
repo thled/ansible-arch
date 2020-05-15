@@ -85,5 +85,8 @@
     1. `$ exit`
     1. `$ umount -R /mnt`
     1. `$ shutdown`
+0. Login as root and connect to wifi
+    1. List wifi networks: `$ nmcli device wifi list`
+    1. Connect to wifi: `$ nmcli device wifi connect SSID password PASSWORD`
 
 [arch]: https://www.archlinux.org/download/

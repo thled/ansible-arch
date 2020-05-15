@@ -27,7 +27,7 @@ font:
   italic:
     family: "Source Code Pro"
     style: SemiboldIt
-  size: 13.0
+  size: 12.0
   offset:
     x: 0
     y: 0
@@ -68,7 +68,7 @@ colors:
     white: '#ffffff'
 visual_bell:
   animation: EaseOutExpo
-  duration: 1000
+  duration: 0
   color: '#ffffff'
 background_opacity: 1.0
 cursor:

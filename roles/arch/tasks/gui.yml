@@ -1,0 +1,4 @@
+---
+- name: install display management
+  pacman: 
+    name: arandr

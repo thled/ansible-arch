@@ -1,0 +1,6 @@
+---
+- name: install audio management
+  pacman:
+    name:
+      - pulseaudio
+      - pavucontrol
