@@ -19,7 +19,7 @@
 
 - name: configure tridactyl
   copy:
-    src: tridactyl/tridactylrc
-    dest: ~/.config/tridactyl/
+    src: tridactyl
+    dest: ~/.config/
   become: true
   become_user: "{{ user }}"

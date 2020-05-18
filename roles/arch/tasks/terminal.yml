@@ -11,13 +11,20 @@
   pacman:
     name: fish
 
+- name: configure fish
+  copy:
+    src: fish
+    dest: ~/.config/
+  become: true
+  become_user: "{{ user }}"
+
 - name: install alacritty
   pacman:
     name: alacritty
 
 - name: configure alacritty
   copy:
-    src: alacritty/alacritty.yml
-    dest: ~/.config/alacritty/
+    src: alacritty
+    dest: ~/.config/
   become: true
   become_user: "{{ user }}"

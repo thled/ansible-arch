@@ -19,8 +19,8 @@
 
 - name: configure vim
   copy:
-    src: vim/init.vim
-    dest: ~/.config/nvim/
+    src: nvim
+    dest: ~/.config/
   become: true
   become_user: "{{ user }}"
 
