@@ -9,6 +9,7 @@
     password: "{{ password | password_hash('sha512') }}"
     groups:
       - wheel
+      - video
 
 - name: create user for aur
   user:

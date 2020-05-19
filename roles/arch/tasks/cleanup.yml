@@ -3,3 +3,8 @@
     name: aur
     state: absent
     remove: yes
+
+- name: Remove aur sudoer
+  file:
+    path: /etc/sudoers.d/2-sudoer-aur
+    state: absent
