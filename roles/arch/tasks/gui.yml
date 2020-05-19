@@ -1,4 +1,16 @@
 ---
+- name: install Xorg
+  pacman:
+    name:
+      - mesa
+      - xorg-server
+      - xorg-xinit
+
 - name: install display management
   pacman: 
     name: arandr
+
+- name: configure natural scrolling
+  copy:
+    src: gui/40-libinput.conf
+    dest: /usr/share/X11/xorg.conf.d/

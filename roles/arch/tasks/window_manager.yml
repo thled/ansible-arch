@@ -1,11 +1,4 @@
 ---
-- name: install Xorg
-  pacman:
-    name:
-      - mesa
-      - xorg-server
-      - xorg-xinit
-
 - name: install rofi
   pacman:
     name: rofi
