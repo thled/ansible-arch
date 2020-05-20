@@ -15,7 +15,7 @@ window:
   startup_mode: Windowed
   gtk_theme_variant: dark
 scrolling:
-  history: 8192
+  history: 0
   multiplier: 5
 font:
   normal:
@@ -27,7 +27,7 @@ font:
   italic:
     family: "Source Code Pro"
     style: SemiboldIt
-  size: 12.0
+  size: 11.0
   offset:
     x: 0
     y: 0
@@ -76,3 +76,7 @@ cursor:
   unfocused_hollow: true
 shell:
   program: /bin/fish
+  args:
+    - --login
+    - --command
+    - "tmux attach || tmux"

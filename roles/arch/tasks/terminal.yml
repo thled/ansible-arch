@@ -7,6 +7,11 @@
   pacman:
     name: tmux
 
+- name: configure tmux
+  copy:
+    src: tmux/
+    dest: ~/
+
 - name: install fish shell
   pacman:
     name: fish
