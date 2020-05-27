@@ -9,6 +9,7 @@
       - less
       - nmap
       - rsync
+      - unzip
       - which
 
 - name: install applications
