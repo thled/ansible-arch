@@ -1,7 +1,9 @@
 ---
 - name: install font
   pacman:
-    name: adobe-source-code-pro-fonts
+    name: 
+      - adobe-source-code-pro-fonts
+      - ttf-dejavu
 
 - name: install tmux
   pacman:
