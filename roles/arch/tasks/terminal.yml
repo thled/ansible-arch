@@ -11,6 +11,8 @@
   copy:
     src: tmux/
     dest: ~/
+  become: true
+  become_user: "{{ user }}"
 
 - name: install fish shell
   pacman:
