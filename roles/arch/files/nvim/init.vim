@@ -33,3 +33,7 @@ set noshowmode
 let g:lightline = {
     \ 'colorscheme': 'wombat',
     \ }
+
+" nerdtree
+let NERDTreeShowHidden=1
+

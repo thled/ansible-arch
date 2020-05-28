@@ -74,6 +74,8 @@ background_opacity: 1.0
 cursor:
   style: Block
   unfocused_hollow: true
+mouse:
+  hide_when_typing: true
 shell:
   program: /bin/fish
   args:
