@@ -4,3 +4,16 @@
     name:
       - pulseaudio
       - pavucontrol
+
+- name: install bluetooth
+  pacman:
+    name:
+      - pulseaudio-alsa
+      - pulseaudio-bluetooth
+      - bluez-utils
+
+- name: configure bluetooth
+  copy:
+    src: audio/
+    dest: /etc/
+

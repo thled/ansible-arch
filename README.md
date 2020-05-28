@@ -15,6 +15,15 @@
 
 - Add SSH keys to `~/.ssh/`.
 - Sync Firefox config and addons by logging in.
+- Configure bluetooth headset:
+    1. `$ pulseaudio -k`
+    1. `$ bluetoothctl`
+    1. `$ default-agent`
+    1. `$ scan on`
+    1. `$ pair CC:98:8B:1B:7B:B1`
+    1. `$ connect CC:98:8B:1B:7B:B1`
+    1. `$ trust CC:98:8B:1B:7B:B1`
+    1. `$ exit`
 
 ## Arch Installation
 
@@ -26,10 +35,10 @@
 0. Verify block device is `/dev/sda`: `$ fdisk -l`
 0. Partition disks: `$ fdisk /dev/sda`
     1. New partition layout: `$ g`
-    1. New efi partition: `$ n`, <Return>, <Return>, `$ +500M`
+    1. New efi partition: `$ n`, <kbd>Return</kbd>, <kbd>Return</kbd>, `$ +500M`
     1. Set type of boot: `$ t`, `$ 1` ("EFI")
-    1. New boot partition: `$ n`, <Return>, <Return>, `$ +500M`
-    1. New root partition: `$ n`, <Return>, <Return>, <Return>
+    1. New boot partition: `$ n`, <kbd>Return</kbd>, <kbd>Return</kbd>, `$ +500M`
+    1. New root partition: `$ n`, <kbd>Return</kbd>, <kbd>Return</kbd>, <kbd>Return</kbd>
     1. Set type of boot: `$ t`, `$ 24` ("root x86_64")
     1. Write partitions: `$ w`
 0. Format partitions
