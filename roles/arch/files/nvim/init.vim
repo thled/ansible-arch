@@ -10,6 +10,9 @@ Plug 'itchyny/lightline.vim'
 " explorer
 Plug 'preservim/nerdtree'
 
+" search
+Plug 'junegunn/fzf.vim'
+
 " comment in/out
 Plug 'tpope/vim-commentary'
 
@@ -36,4 +39,10 @@ let g:lightline = {
 
 " nerdtree
 let NERDTreeShowHidden=1
+
+" fzf
+nnoremap <C-p> :Files<CR>
+nnoremap <C-o> :Buffers<CR>
+nnoremap <C-g> :GFiles<CR>
+nnoremap <C-f> :Rg 
 
