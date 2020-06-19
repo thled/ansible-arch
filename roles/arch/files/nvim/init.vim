@@ -1,48 +1,14 @@
-""" Thled's Neovim config
+""" Thled's Neovim Config
 
-""" Vim-Plug
+" Vim-Plug
+source ~/.config/nvim/vim-plug/plugins.vim
 
-call plug#begin()
+" Vim Config
+source ~/.config/nvim/general/settings.vim
 
-" statusline
-Plug 'itchyny/lightline.vim'
-
-" explorer
-Plug 'preservim/nerdtree'
-
-" search
-Plug 'junegunn/fzf.vim'
-
-" comment in/out
-Plug 'tpope/vim-commentary'
-
-call plug#end()
-
-""" Vim Config
-
-" line numbers
-set number relativenumber
-
-" search
-set ignorecase smartcase
-
-" indentation
-set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smartindent
-
-""" Plugin Config
-
-" lightline
-set noshowmode
-let g:lightline = {
-    \ 'colorscheme': 'wombat',
-    \ }
-
-" nerdtree
-let NERDTreeShowHidden=1
-
-" fzf
-nnoremap <C-p> :Files<CR>
-nnoremap <C-o> :Buffers<CR>
-nnoremap <C-g> :GFiles<CR>
-nnoremap <C-f> :Rg 
+" Plugin Config
+source ~/.config/nvim/plug-config/lightline.vim
+source ~/.config/nvim/plug-config/nerdtree.vim
+source ~/.config/nvim/plug-config/fzf.vim
+source ~/.config/nvim/plug-config/coc.vim
 
