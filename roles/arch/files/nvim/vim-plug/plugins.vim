@@ -20,6 +20,9 @@ Plug 'junegunn/fzf.vim'
 " comment in/out
 Plug 'tpope/vim-commentary'
 
+" surround
+Plug 'tpope/vim-surround'
+
 " autocomplete + navigation
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
