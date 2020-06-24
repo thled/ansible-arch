@@ -1,0 +1,20 @@
+---
+- name: install utilities
+  pacman:
+    name:
+      - curl
+      - ffmpeg
+      - fzf
+      - htop
+      - intel-ucode
+      - jdk-openjdk
+      - less
+      - nmap
+      - nodejs
+      - python-pip
+      - ripgrep
+      - rsync
+      - unzip
+      - which
+      - yarn
+

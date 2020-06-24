@@ -26,6 +26,9 @@ Plug 'tpope/vim-surround'
 " autocomplete + navigation
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" debug
+Plug 'vim-vdebug/vdebug'
+
 " php syntax
 Plug 'StanAngeloff/php.vim'
 
