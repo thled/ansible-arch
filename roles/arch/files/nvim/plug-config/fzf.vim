@@ -1,5 +1,5 @@
-nnoremap <C-p> :Files<CR>
-nnoremap <C-o> :Buffers<CR>
-nnoremap <C-g> :GFiles<CR>
+nnoremap <C-g> :Files<CR>
+nnoremap <C-e> :Buffers<CR>
+nnoremap <C-p> :GFiles<CR>
 nnoremap <C-f> :Rg<CR>
 
