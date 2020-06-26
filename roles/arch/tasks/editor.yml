@@ -31,10 +31,8 @@
   become_user: "{{ user }}"
 
 - name: install python nvim module (for vdebug)
-  aur:
-    name: pynvim
-  become: true
-  become_user: aur
+  pacman:
+    name: python-pynvim
 
 - name: install vscode
   aur:
