@@ -30,10 +30,11 @@
   become: true
   become_user: "{{ user }}"
 
-- name: install nvim python module (for vdebug)
-  pip:
+- name: install python nvim module (for vdebug)
+  aur:
     name: pynvim
-    extra_args: --user
+  become: true
+  become_user: aur
 
 - name: install vscode
   aur:
@@ -41,3 +42,4 @@
       - vscodium-bin
   become: true
   become_user: aur
+
