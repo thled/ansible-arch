@@ -26,6 +26,9 @@ Plug 'tpope/vim-surround'
 " autocomplete + navigation
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" git
+Plug 'mhinz/vim-signify'
+
 " debug
 Plug 'vim-vdebug/vdebug'
 
