@@ -35,6 +35,9 @@ Plug 'vim-vdebug/vdebug'
 " php syntax
 Plug 'StanAngeloff/php.vim'
 
+" twig syntax
+Plug 'lumiliet/vim-twig'
+
 call plug#end()
 
 " Automatically install missing plugins on startup
