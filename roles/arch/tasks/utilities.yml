@@ -17,3 +17,22 @@
       - which
       - yarn
 
+- name: configure ripgrep
+  copy:
+    src: ripgrep
+    dest: ~/.config/
+  become: true
+  become_user: "{{ user }}"
+
+- name: set ripgrep config path
+  lineinfile:
+    path: /etc/environment
+    regexp: '^RIPGREP_CONFIG_PATH=.*'
+    line: RIPGREP_CONFIG_PATH=$HOME/.config/ripgrep/config
+
+- name: set fzf to use ripgrep
+  lineinfile:
+    path: /etc/environment
+    regexp: '^FZF_DEFAULT_COMMAND=.*'
+    line: FZF_DEFAULT_COMMAND=rg --files
+
