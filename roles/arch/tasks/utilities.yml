@@ -28,7 +28,7 @@
   lineinfile:
     path: /etc/environment
     regexp: '^RIPGREP_CONFIG_PATH=.*'
-    line: RIPGREP_CONFIG_PATH=$HOME/.config/ripgrep/config
+    line: "RIPGREP_CONFIG_PATH=/home/{{ user }}/.config/ripgrep/config"
 
 - name: set fzf to use ripgrep
   lineinfile:
