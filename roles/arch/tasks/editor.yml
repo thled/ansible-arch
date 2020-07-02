@@ -23,6 +23,10 @@
     regexp: '^EDITOR=.*'
     line: EDITOR=/usr/bin/nvim
 
+- name: install python nvim module (for vdebug)
+  pacman:
+    name: python-pynvim
+
 - name: configure markdownlint
   copy:
     src: markdownlint
@@ -30,9 +34,12 @@
   become: true
   become_user: "{{ user }}"
 
-- name: install python nvim module (for vdebug)
-  pacman:
-    name: python-pynvim
+- name: configure coc
+  template:
+    src: nvim/coc-settings.json.j2
+    dest: ~/.config/nvim/coc-settings.json
+  become: true
+  become_user: "{{ user }}"
 
 - name: install vscode
   aur:

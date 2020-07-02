@@ -22,3 +22,7 @@
     - name: git_private_email
       prompt: Enter your git email (private)
       private: false
+    - name: nvim_coc_intelephense
+      prompt: Enter Intelephense premium key
+      private: false
+
