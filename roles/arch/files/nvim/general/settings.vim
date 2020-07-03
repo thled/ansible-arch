@@ -1,3 +1,6 @@
+" leader key
+let mapleader = "\<Space>"
+
 " line numbers
 set number relativenumber
 
