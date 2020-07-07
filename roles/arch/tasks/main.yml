@@ -2,6 +2,7 @@
 - import_tasks: user.yml
 - import_tasks: package_manager.yml
 - import_tasks: utilities.yml
+- import_tasks: system.yml
 - import_tasks: ssh.yml
 - import_tasks: vcs.yml
 - import_tasks: virtualization.yml
@@ -14,3 +15,4 @@
 - import_tasks: apps.yml
 - import_tasks: laptop.yml
 - import_tasks: cleanup.yml
+
