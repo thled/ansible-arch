@@ -1,3 +1,6 @@
+" theme
+colorscheme gruvbox
+
 " leader key
 let mapleader = "\<Space>"
 

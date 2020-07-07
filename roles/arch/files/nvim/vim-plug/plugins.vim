@@ -8,20 +8,14 @@ endif
 
 call plug#begin()
 
+" theme
+Plug 'morhetz/gruvbox'
+
 " statusline
 Plug 'itchyny/lightline.vim'
 
-" explorer
-Plug 'preservim/nerdtree'
-
 " search
 Plug 'junegunn/fzf.vim'
-
-" comment in/out
-Plug 'tpope/vim-commentary'
-
-" surround
-Plug 'tpope/vim-surround'
 
 " autocomplete + navigation
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -31,6 +25,12 @@ Plug 'mhinz/vim-signify'
 
 " debug
 Plug 'vim-vdebug/vdebug'
+
+" comment in/out
+Plug 'tpope/vim-commentary'
+
+" surround
+Plug 'tpope/vim-surround'
 
 " php syntax
 Plug 'StanAngeloff/php.vim'
