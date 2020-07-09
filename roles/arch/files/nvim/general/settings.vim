@@ -13,3 +13,7 @@ set ignorecase smartcase
 " indentation
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smartindent
 
+" ruler
+set colorcolumn=120
+highlight ColorColumn ctermbg=238 guibg=lightgrey
+
