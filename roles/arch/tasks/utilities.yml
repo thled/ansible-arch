@@ -2,6 +2,7 @@
 - name: install utilities
   pacman:
     name:
+      - bat
       - curl
       - ffmpeg
       - fzf
@@ -34,5 +35,5 @@
   lineinfile:
     path: /etc/environment
     regexp: '^FZF_DEFAULT_COMMAND=.*'
-    line: FZF_DEFAULT_COMMAND=rg --files
+    line: FZF_DEFAULT_COMMAND=rg --files --hidden
 
