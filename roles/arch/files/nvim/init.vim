@@ -8,7 +8,6 @@ source ~/.config/nvim/general/settings.vim
 
 " Plugin Config
 source ~/.config/nvim/plug-config/lightline.vim
-source ~/.config/nvim/plug-config/nerdtree.vim
 source ~/.config/nvim/plug-config/fzf.vim
 source ~/.config/nvim/plug-config/coc.vim
 source ~/.config/nvim/plug-config/vdebug.vim

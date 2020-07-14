@@ -1,5 +1,6 @@
 " theme
-colorscheme gruvbox
+set background=dark
+autocmd VimEnter * colorscheme gruvbox
 
 " leader key
 let mapleader = "\<Space>"
