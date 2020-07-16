@@ -1,9 +1,9 @@
 ---
 - name: install font
-  pacman:
-    name: 
-      - adobe-source-code-pro-fonts
-      - ttf-dejavu
+  aur:
+    name: nerd-fonts-source-code-pro
+  become: true
+  become_user: aur
 
 - name: install tmux
   pacman:

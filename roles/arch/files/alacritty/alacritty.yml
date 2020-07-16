@@ -19,14 +19,14 @@ scrolling:
   multiplier: 5
 font:
   normal:
-    family: "Source Code Pro"
-    style: Semibold
+    family: "SauceCodePro Nerd Font Mono"
+    style: "Semibold"
   bold:
-    family: "Source Code Pro"
-    style: Bold
+    family: "SauceCodePro Nerd Font Mono"
+    style: "Bold"
   italic:
-    family: "Source Code Pro"
-    style: SemiboldIt
+    family: "SauceCodePro Nerd Font Mono"
+    style: "Semibold Italic"
   size: 11.0
   offset:
     x: 0
