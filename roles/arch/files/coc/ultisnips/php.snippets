@@ -1,9 +1,108 @@
+snippet class "Class declaration template" b
+<?php
+
+declare(strict_types=1);
+
+namespace ${1:App};
+
+${2:final} class ${3:name}$0
+{
+	${VISUAL}${4:// todo: implement}
+}
+endsnippet
+
+snippet testClass "Test class declaration template" b
+<?php
+
+declare(strict_types=1);
+
+namespace ${1:App\\Tests};
+
+use PHPUnit\Framework\TestCase;
+
+/** @covers ${2:CoveredClass} */
+final class ${3:name} extends TestCase
+{
+	/** @test */
+	public function ${4:name}(): void
+	{
+		${VISUAL}${5:self::markTestIncomplete('todo: implement');}$0
+	}
+}
+endsnippet
+
+snippet interface "Interface declaration template" b
+<?php
+
+declare(strict_types=1);
+
+namespace ${1:App};
+
+interface ${2:name}
+{
+	public function ${3:name}(${4:$params}): ${5:void};$0
+}
+endsnippet
+
+snippet pub "Public function" b
+public function ${1:name}(${2:$params}): ${3:void}
+{
+	${VISUAL}${4:// todo: implement}$0
+}
+endsnippet
+
+snippet pro "Protected function" b
+protected function ${1:name}(${2:$params}): ${3:void}
+{
+	${VISUAL}${4:// todo: implement}$0
+}
+endsnippet
+
+snippet pri "Private function" b
+private function ${1:name}(${2:$params}): ${3:void}
+{
+	${VISUAL}${4:// todo: implement}$0
+}
+endsnippet
+
 snippet test "Test function" b
 /** @test */
-public function ${1:name}()
+public function ${1:name}(): void
 {
-	${VISUAL}${2:self::markTestIncomplete('ToDo');}
+	${VISUAL}${2:self::markTestIncomplete('todo: implement');}$0
 }
-$0
+endsnippet
+
+snippet if "If structure" b
+if (${1:$condition})
+	${VISUAL}${2:// todo: implement}$0
+endsnippet
+
+snippet if{ "If structure with braces" b
+if (${1:$condition}) {
+	${VISUAL}${2:// todo: implement}$0
+}
+endsnippet
+
+snippet foreach "Foreach structure" b
+foreach (${1:$array} as ${2:$value})
+	${VISUAL}${3:// todo: implement}$0
+endsnippet
+
+snippet foreach{ "Foreach structure with braces" b
+foreach (${1:$array} as ${2:$value}) {
+	${VISUAL}${3:// todo: implement}$0
+}
+endsnippet
+
+snippet for "For structure" b
+for ($i = 0; $i < ${1:3}; $i++)
+	${VISUAL}${2:// todo: implement}$0
+endsnippet
+
+snippet for{ "For structure with braces" b
+for ($i = 0; $i < ${1:3}; $i++) {
+	${VISUAL}${2:// todo: implement}$0
+}
 endsnippet
 
