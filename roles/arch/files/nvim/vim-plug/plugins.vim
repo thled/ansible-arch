@@ -23,20 +23,23 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " git
 Plug 'mhinz/vim-signify'
 
-" debug
-Plug 'vim-vdebug/vdebug'
-
 " comment in/out
 Plug 'tpope/vim-commentary'
 
 " surround
 Plug 'tpope/vim-surround'
 
+" phpactor
+Plug 'phpactor/phpactor', {'for': 'php', 'branch': 'master', 'do': 'composer install --no-dev -o'}
+
 " php syntax
 Plug 'StanAngeloff/php.vim'
 
 " twig syntax
 Plug 'lumiliet/vim-twig'
+
+" debug
+Plug 'vim-vdebug/vdebug'
 
 call plug#end()
 

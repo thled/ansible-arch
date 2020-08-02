@@ -1,0 +1,4 @@
+composer.autoloader_path:
+    - "%project_root%\/vendor\/autoload.php"
+    - "%project_root%\/app\/vendor\/autoload.php"
+language_server_completion.trim_leading_dollar: true

@@ -34,6 +34,13 @@
   become: true
   become_user: "{{ user }}"
 
+- name: configure phpactor
+  copy:
+    src: phpactor
+    dest: ~/.config/
+  become: true
+  become_user: "{{ user }}"
+
 - name: configure coc
   template:
     src: nvim/coc-settings.json.j2
