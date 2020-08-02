@@ -48,6 +48,13 @@
   become: true
   become_user: "{{ user }}"
 
+- name: configure coc snippets
+  copy:
+    src: coc
+    dest: ~/.config/
+  become: true
+  become_user: "{{ user }}"
+
 - name: install vscode
   aur:
     name: vscodium-bin
