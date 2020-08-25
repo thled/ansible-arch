@@ -73,6 +73,21 @@ public function ${1:name}(): void
 }
 endsnippet
 
+snippet annoTestWith "Provide data for test" b
+/**
+ * @test
+ * @testWith
+ * [${1:firstDataSet}]
+ */
+endsnippet
+
+snippet annoIgnoreTest "Ignore following test" b
+/**
+ * @test
+ * @requires PHP = 6
+ */
+endsnippet
+
 snippet if "If structure" b
 if (${1:$condition})
 	${VISUAL}${2:// todo: implement}$0
