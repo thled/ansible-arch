@@ -1,15 +1,10 @@
 " Install extensions
 let g:coc_global_extensions = [
-    \ 'coc-snippets',
     \ 'coc-vimlsp',
     \ 'coc-markdownlint',
     \ 'coc-json',
     \ 'coc-yaml',
-    \ 'coc-xml',
-    \ 'coc-html',
-    \ 'coc-css',
-    \ 'coc-tsserver',
-    \ 'coc-phpls'
+    \ 'coc-xml'
     \ ]
 
 " TextEdit might fail if hidden is not set.

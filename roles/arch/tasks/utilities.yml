@@ -3,7 +3,6 @@
   pacman:
     name:
       - bat
-      - composer
       - curl
       - ffmpeg
       - fzf
@@ -11,11 +10,12 @@
       - intel-ucode
       - jdk-openjdk
       - less
+      - man-db
       - nmap
       - nodejs
-      - php
       - ripgrep
       - rsync
+      - tree
       - unrar
       - unzip
       - which
@@ -39,10 +39,4 @@
     path: /etc/environment
     regexp: '^FZF_DEFAULT_COMMAND=.*'
     line: FZF_DEFAULT_COMMAND=rg --files --hidden
-
-- name: set unlimited php memory limit
-  lineinfile:
-    path: /etc/php/php.ini
-    regexp: '^memory_limit = .*'
-    line: memory_limit = -1
 
