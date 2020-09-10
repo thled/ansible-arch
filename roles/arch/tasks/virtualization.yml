@@ -22,7 +22,7 @@
 
 - name: configure docker
   copy:
-    src: docker
+    src: docker/
     dest: ~/.docker
   become: true
   become_user: "{{ user }}"
