@@ -32,7 +32,11 @@
 0. Download [Arch Linux ISO][arch].
 0. Verify UEFI: `$ ls /sys/firmware/efi/efivars`
 0. Verify internet: `$ ping -c3 google.com`
-    - If no internet: `$ wifi-menu`
+    - If no internet: `$ iwctl`
+	1. `$ device list`
+	1. `$ station DEVICE scan`
+	1. `$ station DEVICE get-networks`
+	1. `$ station DEVICE connect SSID`
     - Still no internet: `$ dhcpcd`
 0. Verify block device is `/dev/sda`: `$ fdisk -l`
 0. Partition disks: `$ fdisk /dev/sda`
@@ -102,7 +106,11 @@
 ### BIOS
 
 0. Verify internet: `$ ping -c3 google.com`
-    - If no internet: `$ wifi-menu`
+    - If no internet: `$ iwctl`
+	1. `$ device list`
+	1. `$ station DEVICE scan`
+	1. `$ station DEVICE get-networks`
+	1. `$ station DEVICE connect SSID`
     - Still no internet: `$ dhcpcd`
 0. Verify block device is `/dev/sda`: `$ fdisk -l`
 0. Partition disks: `$ fdisk /dev/sda`
