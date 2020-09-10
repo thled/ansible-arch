@@ -1,4 +1,8 @@
 ---
+- name: install fonts
+  pacman:
+    name: ttf-dejavu
+
 - name: configure virtual memory
   copy:
     src: system/99-sysctl.conf
