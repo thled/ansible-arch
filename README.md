@@ -1,8 +1,13 @@
 # Ansible Arch
 
-## Usage
+## Install
 
-1. Install [Arch Linux](#arch-installation).
+### Prerequisite
+
+- [Arch Linux Installation](#arch-installation)
+
+### Ansible Process
+
 1. Install Git and Ansible: `$ pacman -S git ansible`
 1. Install Ansible "aur" module : `$ git clone https://github.com/kewlfft/ansible-aur.git ~/.ansible/plugins/modules/aur`
 1. Clone this repository: `$ git clone https://github.com/thled/ansible-arch.git`
@@ -11,7 +16,7 @@
 1. Reboot system.
 1. Login with your chosen username and start i3: `$ startx`
 
-## Optional
+### Optional
 
 - Add SSH keys to `~/.ssh/`.
 - Sync Firefox config and addons by logging in.
@@ -25,6 +30,15 @@
     1. `$ connect CC:98:8B:1B:7B:B1`
     1. `$ trust CC:98:8B:1B:7B:B1`
     1. `$ exit`
+
+## Usage
+
+- Start the terminal by pressing <kbd>Win</kbd>+<kbd>Return</kbd> and wait while it initializes.
+- Start Neovim by typing `$ nvim` and wait while it initializes.
+You may have to restart it multiple times for complete initialization.
+- Use the shortcut <kbd>Win</kbd>+<kbd>d</kbd> to start any program of your choice.
+- Add any program by using `$ yay`.
+- Use Arandr to configure screenlayout. Or use presets like `$ .screenlayout/home49.sh`.
 
 ## Arch Installation
 

@@ -10,6 +10,13 @@
   pacman: 
     name: arandr
 
+- name: configure screenlayout
+  copy:
+    src: gui/screenlayout/
+    dest: ~/.screenlayout
+  become: true
+  become_user: "{{ user }}"
+
 - name: configure natural scrolling
   copy:
     src: gui/40-libinput.conf
