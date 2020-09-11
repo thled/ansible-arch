@@ -1,6 +1,7 @@
 {
     "default": true,
     "line-length": { "line_length": 120 },
-    "no-duplicate-header": { "siblings_only": true }
+    "no-duplicate-header": { "siblings_only": true },
+    "commands-show-output": false
 }
 
