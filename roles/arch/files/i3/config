@@ -93,6 +93,10 @@ bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 
+# assign apps to workspaces
+assign [class="Alacritty"] $ws1
+assign [class="firefox"] $ws2
+
 # reload/restart/exit
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
@@ -125,3 +129,11 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bar {
     status_command i3status
 }
+
+# apps on startup
+exec --no-startup-id alacritty
+exec firefox
+
+# active workspace on startup
+exec --no-startup-id i3-msg workspace $ws1
+
