@@ -6,6 +6,7 @@
       - curl
       - ffmpeg
       - fzf
+      - github-cli
       - htop
       - intel-ucode
       - jdk-openjdk
