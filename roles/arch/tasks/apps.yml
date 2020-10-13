@@ -9,3 +9,8 @@
       - ranger
       - vlc
 
+- name: install applications from aur
+  aur:
+    name: screen-desktop-bin
+  become: true
+  become_user: aur
