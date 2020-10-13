@@ -33,12 +33,11 @@
 
 ## Usage
 
-- Start the terminal by pressing <kbd>Win</kbd>+<kbd>Return</kbd> and wait while it initializes.
 - Start Neovim by typing `$ nvim` and wait while it initializes.
 You may have to restart it multiple times for complete initialization.
 - Use the shortcut <kbd>Win</kbd>+<kbd>d</kbd> to start any program of your choice.
 - Add any program by using `$ yay`.
-- Use Arandr to configure screenlayout. Or use presets like `$ .screenlayout/home49.sh`.
+- Use Arandr to configure screenlayout. Or use presets like `$ .screenlayout/xps49.sh`.
 
 ## Arch Installation
 
