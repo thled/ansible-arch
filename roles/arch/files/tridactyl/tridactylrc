@@ -1,5 +1,6 @@
 " blacklist
 blacklistadd speedcoder.net
+blacklistadd floorplanner.com
 
 " General Settings
 set theme dark
