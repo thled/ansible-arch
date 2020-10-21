@@ -15,6 +15,7 @@
       - man-db
       - nmap
       - nodejs
+      - openvpn
       - ripgrep
       - rsync
       - tree
@@ -22,6 +23,12 @@
       - unzip
       - which
       - yarn
+
+- name: install utilities from aur
+  aur:
+    name: openvpn-update-systemd-resolved
+  become: true
+  become_user: aur
 
 - name: configure ripgrep
   copy:
