@@ -19,3 +19,5 @@ set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smartindent
 set colorcolumn=120
 highlight ColorColumn ctermbg=238 guibg=lightgrey
 
+" terminal esc
+tnoremap <Esc> <C-\><C-n>

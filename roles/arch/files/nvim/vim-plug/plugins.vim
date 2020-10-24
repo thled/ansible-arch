@@ -28,6 +28,12 @@ Plug 'tpope/vim-commentary'
 " surround
 Plug 'tpope/vim-surround'
 
+" additional text objects
+Plug 'wellle/targets.vim'
+
+" switch true/false
+Plug 'zef/vim-cycle'
+
 call plug#end()
 
 " Automatically install missing plugins on startup
