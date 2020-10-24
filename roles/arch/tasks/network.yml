@@ -1,0 +1,25 @@
+---
+- name: install network utilities
+  pacman:
+    name: 
+      - openssh
+      - openvpn
+
+- name: install network utilities from aur
+  aur:
+    name: openvpn-update-systemd-resolved
+  become: true
+  become_user: aur
+
+- name: configure ssh
+  copy:
+    src: ssh/config
+    dest: ~/.ssh/
+    mode: 0644
+  become: true
+  become_user: "{{ user }}"
+
+- name: configure openvpn
+  copy:
+    src: openvpn/client
+    dest: /etc/openvpn/

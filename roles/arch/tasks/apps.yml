@@ -14,3 +14,10 @@
     name: screen-desktop-bin
   become: true
   become_user: aur
+
+- name: copy applications
+  copy:
+    src: apps
+    dest: ~/
+  become: true
+  become_user: "{{ user }}"
