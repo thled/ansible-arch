@@ -15,6 +15,7 @@
       - man-db
       - nmap
       - nodejs
+      - ntfs-3g
       - ripgrep
       - rsync
       - tree
