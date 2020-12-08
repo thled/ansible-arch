@@ -27,6 +27,19 @@
   become: true
   become_user: "{{ user }}"
 
+- name: install starship prompt
+  aur:
+    name: starship
+  become: true
+  become_user: aur
+
+- name: configure starship
+  copy:
+    src: starship/starship.toml
+    dest: ~/.config/
+  become: true
+  become_user: "{{ user }}"
+
 - name: install alacritty
   pacman:
     name: alacritty
