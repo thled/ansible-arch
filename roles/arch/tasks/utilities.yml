@@ -9,6 +9,7 @@
       - fzf
       - github-cli
       - htop
+      - imagemagick
       - intel-ucode
       - jdk-openjdk
       - less
