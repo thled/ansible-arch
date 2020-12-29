@@ -35,11 +35,29 @@
 
 - Start Neovim by typing `$ nvim` and wait while it initializes.
 You may have to restart it multiple times for complete initialization.
-- Use the shortcut <kbd>Win</kbd>+<kbd>d</kbd> to start any program of your choice.
-- Add any program by using `$ yay`.
+- Use the shortcut <kbd>Win</kbd>+<kbd>d</kbd> to start any application.
+- Install any application by using `$ yay APP`.
 - Use Arandr to configure screenlayout. Or use presets like `$ .screenlayout/xps49.sh`.
 
 ## Arch Installation
+
+### Script (EFI)
+
+1. Download [Arch Linux ISO][arch].
+1. Verify UEFI: `$ ls /sys/firmware/efi/efivars`
+1. Verify internet: `$ ping -c3 google.com`
+    - If no internet: `$ iwctl`
+        1. `$ device list`
+        1. `$ station DEVICE scan`
+        1. `$ station DEVICE get-networks`
+        1. `$ station DEVICE connect SSID`
+    - Still no internet: `$ dhcpcd`
+1. Verify block device is `/dev/nvme0n1`: `$ fdisk -l`
+1. Download script: `$ curl -LO https://raw.githubusercontent.com/thled/ansible-arch/master/arch-install.sh`
+1. Execute script: `$ bash arch-install.sh`
+1. Reboot, login as root and connect to wifi
+    1. List wifi networks: `$ nmcli device wifi list`
+    1. Connect to wifi: `$ nmcli device wifi connect SSID password PASSWORD`
 
 ### EFI
 
