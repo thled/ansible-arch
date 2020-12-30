@@ -2,6 +2,7 @@
 - name: install applications
   pacman:
     name:
+      - anki
       - feh
       - gimp
       - obs-studio
@@ -11,7 +12,7 @@
 
 - name: install applications from aur
   aur:
-    name: screen-desktop-bin
+    name: anydesk-bin
   become: true
   become_user: aur
 
