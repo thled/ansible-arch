@@ -5,6 +5,15 @@
       - chromium
       - firefox
 
+- name: get firefox's profile dir
+  shell: grep '^Default=.*\.default-release$' ~/.mozilla/firefox/profiles.ini | sed s/^Default=//
+  register: firefox_profile_dir
+
+- name: remove white loading screen in firefox
+  copy:
+      src: firefox/
+      dest: ~/.mozilla/firefox/{{ firefox_profile_dir.stdout }}/
+
 - name: download install script for tridactyl native messenger
   get_url:
     url: https://raw.githubusercontent.com/tridactyl/tridactyl/master/native/install.sh
