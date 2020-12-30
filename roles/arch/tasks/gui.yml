@@ -14,15 +14,9 @@
   copy:
     src: gui/screenlayout/
     dest: ~/.screenlayout
+    mode: preserve
   become: true
   become_user: "{{ user }}"
-
-- name: make screenlayouts executable
-  file:
-    path: ~/.screenlayout
-    state: directory
-    recurse: yes
-    mode: a+x
 
 - name: configure natural scrolling
   copy:
