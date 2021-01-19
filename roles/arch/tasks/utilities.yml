@@ -5,6 +5,7 @@
       - bat
       - curl
       - exa
+      - fd
       - ffmpeg
       - fzf
       - github-cli

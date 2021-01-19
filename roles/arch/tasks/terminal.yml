@@ -5,6 +5,10 @@
   become: true
   become_user: aur
 
+- name: install emoji font
+  pacman:
+    name: noto-fonts-emoji
+
 - name: install tmux
   pacman:
     name: tmux
