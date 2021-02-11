@@ -8,8 +8,15 @@
   pacman:
     name: base-devel
 
-- name: install yay
+- name: install paru
   aur:
-    name: yay
+    name: paru
   become: true
   become_user: aur
+
+- name: enable color
+  lineinfile:
+    path: /etc/pacman.conf
+    regexp: '^#Color'
+    line: Color
+
