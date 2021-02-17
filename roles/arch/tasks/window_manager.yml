@@ -4,7 +4,8 @@
     name:
       - picom
       - dmenu
-      - polybar
+      - xmobar
+      - slock
       - leftwm
 
 - name: set leftwm as default
@@ -21,17 +22,9 @@
   become: true
   become_user: "{{ user }}"
 
-- name: create leftwm themes dir
-  file:
-    path: ~/.config/leftwm/themes
-    state: directory
-  become: true
-  become_user: "{{ user }}"
-
 - name: configure leftwm theme
-  file:
-    src: /usr/share/leftwm/themes/basic_polybar
-    dest: ~/.config/leftwm/themes
-    state: link
+  copy:
+    src: leftwm/themes
+    dest: ~/.config/leftwm/
   become: true
   become_user: "{{ user }}"
