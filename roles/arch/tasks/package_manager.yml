@@ -20,3 +20,9 @@
     regexp: '^#Color'
     line: Color
 
+- name: reverse suggestions
+  lineinfile:
+    path: /etc/paru.conf
+    regexp: '^#BottomUp'
+    line: BottomUp
+
