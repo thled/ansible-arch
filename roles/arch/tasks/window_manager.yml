@@ -1,26 +1,37 @@
 ---
-- name: install rofi
-  pacman:
-    name: rofi
-
-- name: install i3
+- name: install leftwm
   pacman:
     name:
       - picom
-      - i3-gaps
-      - i3status
-      - i3lock
+      - dmenu
+      - polybar
+      - leftwm
 
-- name: set i3 as default
+- name: set leftwm as default
   copy:
-    src: i3/.xinitrc
+    src: leftwm/.xinitrc
     dest: ~/
   become: true
   become_user: "{{ user }}"
 
-- name: configure i3
+- name: configure leftwm
   copy:
-    src: i3/config
-    dest: ~/.config/i3/
+    src: leftwm/config.toml
+    dest: ~/.config/leftwm/
+  become: true
+  become_user: "{{ user }}"
+
+- name: create leftwm themes dir
+  file:
+    path: ~/.config/leftwm/themes
+    state: directory
+  become: true
+  become_user: "{{ user }}"
+
+- name: configure leftwm theme
+  file:
+    src: /usr/share/leftwm/themes/basic_polybar
+    dest: ~/.config/leftwm/themes
+    state: link
   become: true
   become_user: "{{ user }}"

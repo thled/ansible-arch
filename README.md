@@ -14,7 +14,7 @@
 1. Change to project directory: `$ cd ansible-arch`
 1. Run the Ansible Playbook: `$ ansible-playbook playbook.yml`
 1. Reboot system.
-1. Login with your chosen username and start i3: `$ startx`
+1. Login with your chosen username and start the window manager: `$ startx`
 
 ### Optional
 
