@@ -31,9 +31,11 @@
   become: true
   become_user: "{{ user }}"
 
-- name: install starship prompt
+- name: install terminal utils
   aur:
-    name: starship
+    name:
+      - zoxid
+      - starship
   become: true
   become_user: aur
 
