@@ -34,7 +34,7 @@
 - name: install terminal utils
   aur:
     name:
-      - zoxid
+      - zoxide
       - starship
   become: true
   become_user: aur
