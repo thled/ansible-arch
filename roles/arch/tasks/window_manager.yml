@@ -31,5 +31,6 @@
   copy:
     src: leftwm/themes
     dest: ~/.config/leftwm/
+    mode: preserve
   become: true
   become_user: "{{ user }}"
