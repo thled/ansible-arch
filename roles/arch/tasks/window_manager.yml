@@ -1,12 +1,17 @@
 ---
-- name: install leftwm
+- name: install window manager utils
   pacman:
     name:
       - picom
       - dmenu
       - xmobar
       - slock
-      - leftwm
+
+- name: install leftwm
+  aur:
+    name: leftwm
+  become: true
+  become_user: aur
 
 - name: set leftwm as default
   copy:
