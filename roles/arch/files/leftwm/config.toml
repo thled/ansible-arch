@@ -1,23 +1,22 @@
 modkey = "Mod4"
 tags = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
-workspaces = []
+layouts = [
+#    "MainAndVertStack",
+#    "MainAndHorizontalStack",
+#    "MainAndDeck",
+#    "GridHorizontal",
+    "EvenHorizontal",
+#    "EvenVertical",
+#    "Fibonacci",
+    "CenterMain",
+#    "CenterMainBalanced",
+#    "Monocle",
+#    "RightWiderLeftStack",
+    "LeftWiderRightStack",
+]
 
-# [[workspaces]]
-# y = 0
-# x = 0
-# height = 1080
-# width = 960
-# [[workspaces]]
-# y = 0
-# x = 960
-# height = 1080
-# width = 1920
-# [[workspaces]]
-# y = 0
-# x = 2880
-# height = 1080
-# width = 960
+workspaces = []
 
 [[keybind]]
 command = "Execute"
@@ -215,3 +214,4 @@ command = "MoveToTag"
 value = "9"
 modifier = ["modkey", "Shift"]
 key = "9"
+
