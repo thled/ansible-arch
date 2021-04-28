@@ -2,35 +2,26 @@
 - name: install window manager utils
   pacman:
     name:
-      - picom
       - dmenu
       - xmobar
       - slock
 
-- name: install leftwm
-  aur:
-    name: leftwm
-  become: true
-  become_user: aur
+- name: install xmonad
+  pacman:
+    name: 
+      - xmonad
+      - xmonad-contrib
 
-- name: set leftwm as default
+- name: set xmonad as default
   copy:
-    src: leftwm/.xinitrc
+    src: xmonad/.xinitrc
     dest: ~/
   become: true
   become_user: "{{ user }}"
 
-- name: configure leftwm
+- name: configure xmonad
   copy:
-    src: leftwm/config.toml
-    dest: ~/.config/leftwm/
-  become: true
-  become_user: "{{ user }}"
-
-- name: configure leftwm theme
-  copy:
-    src: leftwm/themes
-    dest: ~/.config/leftwm/
-    mode: preserve
+    src: xmonad/xmonad.hs
+    dest: ~/.xmonad/
   become: true
   become_user: "{{ user }}"
