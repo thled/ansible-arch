@@ -1,9 +1,21 @@
 import XMonad
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
+import XMonad.Layout.Grid
+import XMonad.Layout.MultiColumns
+import XMonad.Layout.NoBorders
+import XMonad.Layout.ThreeColumns
 import XMonad.Util.EZConfig
 import XMonad.Util.Run
 import XMonad.Util.SpawnOnce
+
+tldLayouts = layoutMulti ||| layoutCenter ||| layoutGrid ||| layoutTall ||| layoutFull
+    where
+        layoutMulti = multiCol [1] 1 0.01 (-0.5)
+        layoutCenter = ThreeColMid 1 (3/100) (1/2)
+        layoutGrid = Grid
+        layoutTall = Tall 1 (3/100) (1/2)
+        layoutFull = Full
 
 main = do
     xmproc <- spawnPipe "xmobar ~/.xmonad/xmobar.hs"
@@ -11,7 +23,7 @@ main = do
         { modMask = mod4Mask
         , terminal = "alacritty"
         , focusedBorderColor = "#0066FF"
-        , layoutHook=avoidStruts $ layoutHook def
+        , layoutHook = avoidStruts $ smartBorders $ tldLayouts
         , logHook = dynamicLogWithPP xmobarPP
             { ppOutput = hPutStrLn xmproc
             , ppCurrent = xmobarColor "black" "grey" . wrap "[" "]"
