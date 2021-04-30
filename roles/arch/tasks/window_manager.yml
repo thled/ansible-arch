@@ -3,8 +3,9 @@
   pacman:
     name:
       - dmenu
-      - xmobar
+      - picom
       - slock
+      - xmobar
 
 - name: install xmonad
   pacman:
