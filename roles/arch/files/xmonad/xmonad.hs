@@ -1,6 +1,7 @@
 import XMonad
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
+import XMonad.Util.EZConfig
 import XMonad.Util.Run
 import XMonad.Util.SpawnOnce
 
@@ -20,3 +21,7 @@ main = do
             , ppTitle = xmobarColor "#00AAFF" "" . shorten 100
             }
         }
+        `additionalKeysP`
+        [ ("M-x", spawn "slock")
+        , ("M-n", spawn "touch ~/.cache/pomodoro_session")
+        ]
