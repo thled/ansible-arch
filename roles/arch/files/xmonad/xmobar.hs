@@ -25,7 +25,7 @@ Config { font = "xft:SauceCodePro Nerd Font:pixelsize=12:antialiase=true:autohin
                                        , "-i"	, "Charged"
                              ] 50
                     , Run UnsafeStdinReader
-                    , Run CommandReader "~/.pymodoro/pymodoro.py -i 15" "pomodoro" 
+                    , Run CommandReader "~/.pymodoro/pymodoro.py" "pomodoro" 
     ]
     , sepChar = "%"
     , alignSep = "}{"
