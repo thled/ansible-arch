@@ -2,6 +2,7 @@ import XMonad
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.ManageDocks
+import XMonad.Hooks.SetWMName
 import XMonad.Layout.Grid
 import XMonad.Layout.MultiColumns
 import XMonad.Layout.NoBorders
@@ -21,8 +22,9 @@ tldLayouts = layoutMulti ||| layoutCenter ||| layoutGrid ||| layoutTall ||| layo
 main = do
     xmproc <- spawnPipe "xmobar ~/.xmonad/xmobar.hs"
     xmonad $ ewmh def
-        { manageHook         = manageDocks
-        , handleEventHook    = docksEventHook
+        { startupHook = setWMName "LG3D"
+        , manageHook = manageDocks
+        , handleEventHook = docksEventHook
         , modMask = mod4Mask
         , terminal = "alacritty"
         , focusedBorderColor = "#0066FF"
