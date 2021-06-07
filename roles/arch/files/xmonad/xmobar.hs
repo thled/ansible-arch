@@ -25,9 +25,8 @@ Config { font = "xft:SauceCodePro Nerd Font:pixelsize=12:antialiase=true:autohin
                                        , "-i"	, "Charged"
                              ] 50
                     , Run UnsafeStdinReader
-                    , Run CommandReader "~/.pymodoro/pymodoro.py" "pomodoro" 
     ]
     , sepChar = "%"
     , alignSep = "}{"
-    , template = "%UnsafeStdinReader% }{ %pomodoro% | %multicpu% | %memory% * %swap% | %eno1% * %wi% | %battery% | %date% | %EDDL%"
+    , template = "%UnsafeStdinReader% }{ %multicpu% | %memory% * %swap% | %eno1% * %wi% | %battery% | %date% | %EDDL%"
 }

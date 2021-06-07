@@ -26,3 +26,10 @@
     dest: ~/.xmonad/
   become: true
   become_user: "{{ user }}"
+
+- name: configure xmobar
+  copy:
+    src: xmonad/xmobar.hs
+    dest: ~/.xmonad/
+  become: true
+  become_user: "{{ user }}"
