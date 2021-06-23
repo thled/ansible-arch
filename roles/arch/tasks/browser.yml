@@ -11,24 +11,5 @@
 
 - name: remove white loading screen in firefox
   copy:
-      src: firefox/
-      dest: ~/.mozilla/firefox/{{ firefox_profile_dir.stdout }}/
-
-- name: download install script for tridactyl native messenger
-  get_url:
-    url: https://raw.githubusercontent.com/tridactyl/tridactyl/master/native/install.sh
-    dest: /tmp/trinativeinstall.sh
-  become: true
-  become_user: "{{ user }}"
-
-- name: install tridactyl native messenger
-  shell: bash /tmp/trinativeinstall.sh master
-  become: true
-  become_user: "{{ user }}"
-
-- name: configure tridactyl
-  copy:
-    src: tridactyl
-    dest: ~/.config/
-  become: true
-  become_user: "{{ user }}"
+    src: firefox/
+    dest: ~/.mozilla/firefox/{{ firefox_profile_dir.stdout }}/
