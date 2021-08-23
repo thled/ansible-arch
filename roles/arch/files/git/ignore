@@ -28,3 +28,5 @@
 ### Platform.sh
 *--dump.sql
 *--dump.sql.gz
+*--dump.json
+*--dump.json.gz

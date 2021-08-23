@@ -13,6 +13,7 @@
       - imagemagick
       - intel-ucode
       - jdk-openjdk
+      - jq
       - less
       - man-db
       - nmap
