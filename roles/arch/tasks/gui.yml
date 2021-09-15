@@ -22,3 +22,11 @@
   copy:
     src: gui/40-libinput.conf
     dest: /usr/share/X11/xorg.conf.d/
+
+- name: configure compose key
+  copy:
+    src: gui/.Xmodmap
+    dest: ~/
+  become: true
+  become_user: "{{ user }}"
+
