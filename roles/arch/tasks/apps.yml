@@ -5,6 +5,7 @@
       - anki
       - feh
       - gimp
+      - networkmanager-fortisslvpn
       - obs-studio
       - pcmanfm
       - ranger
@@ -15,7 +16,6 @@
     name: 
       - anydesk-bin
       - teams
-      - openfortigui
   become: true
   become_user: aur
 
