@@ -34,7 +34,6 @@
 ## Usage
 
 - Start Neovim by typing `$ nvim` and wait while it initializes.
-You may have to restart it multiple times for complete initialization.
 - Use the shortcut <kbd>Win</kbd>+<kbd>p</kbd> to start any application.
 - Install any application by using `$ paru APP`.
 - Use Arandr to configure screenlayout. Or use presets like `$ .screenlayout/xps49.sh`.

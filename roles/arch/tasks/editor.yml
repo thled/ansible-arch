@@ -27,8 +27,23 @@
       
 - name: install lsp
   yarn:
-    name: vscode-langservers-extracted
+    name:
+      - ansible-language-server
+      - dockerfile-language-server-nodejs
+      - vim-language-server
+      - vscode-langservers-extracted
+      - yaml-language-server
     global: yes
+
+- name: install lsp dependencies
+  pacman:
+    name: ansible-lint
+
+- name: install lsp dependencies (aur)
+  aur:
+    name: lemminx
+  become: true
+  become_user: aur
 
 - name: configure markdownlint
   copy:

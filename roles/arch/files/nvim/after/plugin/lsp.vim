@@ -27,14 +27,36 @@ local on_attach = function(client, bufnr)
 
     -- Config
     vim.lsp.handlers['textDocument/references'] = require('telescope.builtin').lsp_references
-    vim.api.nvim_command [[autocmd CursorHold  <buffer> lua vim.lsp.buf.document_highlight()]]
-    vim.api.nvim_command [[autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()]]
 end
 
-local servers = { 
-    "html",
+-- Enable snippet capability for completion
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+-- Enable vscode-langservers-extracted lsp
+local vscodeservers = {
     "cssls",
-    "jsonls"
+    "html",
+    "jsonls",
+}
+for _, lsp in ipairs(vscodeservers) do
+    nvim_lsp[lsp].setup {
+        on_attach = on_attach,
+        capabilities = capabilities,
+    }
+end
+
+-- Enable lemminx lsp
+nvim_lsp.lemminx.setup{
+    on_attach = on_attach,
+    cmd = { "/usr/bin/lemminx" },
+}
+
+-- Enable other lsps
+local servers = {
+    "ansiblels",
+    "dockerls",
+    "vimls",
+    "yamlls",
 }
 for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup { on_attach = on_attach }
