@@ -3,13 +3,6 @@
   pacman:
     name: neovim
 
-- name: create vim autoload directory
-  file:
-    path: ~/.local/share/nvim/site/autoload
-    state: directory
-  become: true
-  become_user: "{{ user }}"
-
 - name: configure vim
   copy:
     src: nvim
@@ -30,6 +23,11 @@
 - name: install node provider
   yarn:
     name: neovim
+    global: yes
+      
+- name: install lsp
+  yarn:
+    name: vscode-langservers-extracted
     global: yes
 
 - name: configure markdownlint

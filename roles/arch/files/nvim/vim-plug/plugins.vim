@@ -1,29 +1,37 @@
 " auto-install vim-plug
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
-  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall
+  silent execute '!curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
 call plug#begin()
 
 " theme
-Plug 'morhetz/gruvbox'
+Plug 'sainnhe/gruvbox-material'
 
 " statusline
-Plug 'itchyny/lightline.vim'
+Plug 'hoob3rt/lualine.nvim'
+
+" syntax highlighting
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+" lsp
+Plug 'neovim/nvim-lspconfig'
 
 " search
-Plug 'junegunn/fzf.vim'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope-fzf-native.nvim', {'do': 'make'}
+Plug 'nvim-telescope/telescope.nvim'
 
-" autocomplete + navigation
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" autocomplete
+Plug 'hrsh7th/nvim-compe'
 
 " git
-Plug 'mhinz/vim-signify'
+Plug 'lewis6991/gitsigns.nvim'
 
-" comment in/out
-Plug 'tpope/vim-commentary'
+" comment
+Plug 'terrortylor/nvim-comment'
 
 " surround
 Plug 'tpope/vim-surround'
@@ -35,10 +43,4 @@ Plug 'wellle/targets.vim'
 Plug 'zef/vim-cycle'
 
 call plug#end()
-
-" Automatically install missing plugins on startup
-autocmd VimEnter *
-  \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
-  \|   PlugInstall --sync | q
-  \| endif
 

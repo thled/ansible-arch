@@ -1,7 +1,7 @@
 " theme
 set background=dark
-let g:gruvbox_contrast_dark = 'hard'
-autocmd VimEnter * colorscheme gruvbox
+let g:gruvbox_material_background = 'hard'
+autocmd VimEnter * colorscheme gruvbox-material
 
 " leader key
 let mapleader = "\<Space>"
@@ -21,3 +21,7 @@ highlight ColorColumn ctermbg=238 guibg=lightgrey
 
 " terminal esc
 tnoremap <Esc> <C-\><C-n>
+
+" allow unsaved buffer switch
+set hidden
+
