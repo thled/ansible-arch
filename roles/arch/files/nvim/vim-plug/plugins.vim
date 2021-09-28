@@ -25,7 +25,8 @@ Plug 'nvim-telescope/telescope-fzf-native.nvim', {'do': 'make'}
 Plug 'nvim-telescope/telescope.nvim'
 
 " autocomplete
-Plug 'hrsh7th/nvim-compe'
+Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
+Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
 
 " git
 Plug 'lewis6991/gitsigns.nvim'

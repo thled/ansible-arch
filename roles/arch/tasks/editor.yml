@@ -24,7 +24,7 @@
   yarn:
     name: neovim
     global: yes
-      
+
 - name: install lsp
   yarn:
     name:
