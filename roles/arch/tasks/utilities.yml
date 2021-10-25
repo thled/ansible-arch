@@ -27,6 +27,7 @@
       - tree
       - unrar
       - unzip
+      - v4l2ucp
       - which
       - yarn
 

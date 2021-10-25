@@ -1,0 +1,1 @@
+KERNEL=="video[0-9]*", SUBSYSTEM=="video4linux", SUBSYSTEMS=="usb", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="085e", ATTR{index}=="0", RUN+="/usr/bin/v4l2-ctl --set-ctrl=zoom_absolute=150"
