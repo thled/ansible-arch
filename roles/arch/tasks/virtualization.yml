@@ -3,10 +3,6 @@
   pacman:
     name: docker
 
-- name: install docker-compose
-  pacman:
-    name: docker-compose
-
 - name: enable docker daemon
   systemd:
     name: docker.service
