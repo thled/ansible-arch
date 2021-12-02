@@ -40,5 +40,6 @@ main = do
         }
         `additionalKeysP`
         [ ("M-x", spawn "slock")
-        , ("M-n", spawn "touch ~/.cache/pomodoro_session")
+        , ("M-C-1", spawn "~/.screenlayout/thinkpad_only.sh")
+        , ("M-C-2", spawn "~/.screenlayout/thinkpad49.sh")
         ]
