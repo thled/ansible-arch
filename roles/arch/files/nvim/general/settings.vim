@@ -22,9 +22,15 @@ highlight ColorColumn ctermbg=238 guibg=lightgrey
 " incremental substitute
 set inccommand=nosplit
 
+" allow unsaved buffer switch
+set hidden
+
+" do not automatically insert comment
+autocmd BufNewFile,BufRead * setlocal formatoptions-=ro
+
 " terminal esc
 tnoremap <Esc> <C-\><C-n>
 
-" allow unsaved buffer switch
-set hidden
+" keymap for no highlighting
+nnoremap <nowait><silent> <C-C> :noh<CR>
 
