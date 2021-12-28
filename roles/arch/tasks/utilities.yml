@@ -12,6 +12,7 @@
       - github-cli
       - htop
       - imagemagick
+      - inetutils
       - intel-ucode
       - jdk-openjdk
       - jq
