@@ -40,6 +40,7 @@ main = do
         }
         `additionalKeysP`
         [ ("M-x", spawn "slock")
-        , ("M-C-1", spawn "~/.screenlayout/thinkpad_only.sh")
-        , ("M-C-2", spawn "~/.screenlayout/thinkpad49.sh")
+        , ("M-C-1", spawn "xrandr --output eDP-1 --mode 1920x1080 --pos 0x0 --rotate normal --output DP-1 --off --output HDMI-1 --off --output DP-2 --off --output HDMI-2 --off")
+        , ("M-C-2", spawn "xrandr --output eDP-1 --off --output DP-1 --off --output HDMI-1 --off --output DP-2 --off --output HDMI-2 --primary --mode 3840x1080 --pos 0x0 --rotate normal")
+        , ("M-C-3", spawn "xrandr --output eDP-1 --off --output DP-1 --off --output HDMI-1 --off --output DP-2 --off --output HDMI-2 --primary --mode 1920x1080 --pos 0x0 --rotate normal")
         ]
