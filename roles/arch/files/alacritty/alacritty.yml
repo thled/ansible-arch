@@ -70,7 +70,7 @@ bell:
   animation: EaseOutExpo
   duration: 0
   color: '#ffffff'
-background_opacity: 1.0
+window_opacity: 1.0
 cursor:
   style: Block
   unfocused_hollow: true
